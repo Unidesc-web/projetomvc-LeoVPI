@@ -1,0 +1,18 @@
+@model AluguelCarros.Models.Carro
+
+@{
+    ViewData["Title"] = "Excluir Carro";
+}
+
+<h2>Tem certeza que deseja excluir este carro?</h2>
+
+<div>
+    <h4>@Model.Modelo - @Model.Marca</h4>
+    <p>Ano: @Model.Ano</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

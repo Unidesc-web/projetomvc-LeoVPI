@@ -1,0 +1,38 @@
+@model IEnumerable<AluguelCarros.Models.Carro>
+
+@{
+    ViewData["Title"] = "Lista de Carros";
+}
+
+<h2>Lista de Carros</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Adicionar Novo Carro</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Ano</th>
+            <th>Disponível</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carro in Model)
+        {
+            <tr>
+                <td>@carro.Modelo</td>
+                <td>@carro.Marca</td>
+                <td>@carro.Ano</td>
+                <td>@(carro.Disponivel ? "Sim" : "Não")</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@carro.Id">Editar</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@carro.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
