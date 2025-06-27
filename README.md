@@ -1,4 +1,9 @@
 Trabalho - Princípios SOLID (ISP e DIP)
+
+cd AluguelCarros
+http://localhost:5147/
+
+
 1) Princípio da Segregação de Interfaces (ISP)
 O Princípio da Segregação de Interfaces (ISP) estabelece que uma classe não deve ser forçada a depender de métodos que não utiliza. Esse princípio ajuda a evitar o 'code smell' conhecido como 'Interface Inflada', que ocorre quando uma interface possui métodos demais, obrigando classes a implementarem funcionalidades desnecessárias.
 
